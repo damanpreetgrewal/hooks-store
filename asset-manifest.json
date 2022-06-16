@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fav-store-custom-hook/static/css/main.a1d1746a.css",
+    "main.js": "/fav-store-custom-hook/static/js/main.c9831316.js",
+    "index.html": "/fav-store-custom-hook/index.html",
+    "main.a1d1746a.css.map": "/fav-store-custom-hook/static/css/main.a1d1746a.css.map",
+    "main.c9831316.js.map": "/fav-store-custom-hook/static/js/main.c9831316.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1d1746a.css",
+    "static/js/main.c9831316.js"
+  ]
+}
