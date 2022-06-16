@@ -14,27 +14,26 @@ export const useStore = (shouldListen = true) => {
     for (const listener of listeners) {
       listener(globalState);
     }
-
-    useEffect(() => {
-        if(shouldListen){
-            listeners.push(setState);
-        }
-
-        return () => {
-            if(shouldListen){
-                listeners = listeners.filter(li => li !== setState);
-            }
-        };
-    }, [setState, shouldListen]);
   };
+
+  useEffect(() => {
+    if (shouldListen) {
+      listeners.push(setState);
+    }
+
+    return () => {
+      if (shouldListen) {
+        listeners = listeners.filter((li) => li !== setState);
+      }
+    };
+  }, [setState, shouldListen]);
 
   return [globalState, dispatch];
 };
 
 export const initStore = (userActions, initialState) => {
-    if (initialState) {
-      globalState = { ...globalState, ...initialState };
-    }
-    actions = { ...actions, ...userActions };
-  };
-  
+  if (initialState) {
+    globalState = { ...globalState, ...initialState };
+  }
+  actions = { ...actions, ...userActions };
+};
