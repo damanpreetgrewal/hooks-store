@@ -7,7 +7,7 @@ const configureProductsStore = () => {
       console.log("prodIndex: " + prodIndex);
       const newFavStatus = !curState.products[prodIndex].isFavorite;
       const updatedProducts = [...curState.products];
-      console.log(updatedProducts[prodIndex]);
+
       updatedProducts[prodIndex] = {
         ...curState.products[prodIndex],
         isFavorite: newFavStatus,
