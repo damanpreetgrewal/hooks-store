@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 let globalState = {};
-let listeners = {};
+let listeners = [];
 let actions = {};
 
 export const useStore = (shouldListen = true) => {

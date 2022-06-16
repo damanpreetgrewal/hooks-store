@@ -1,49 +1,50 @@
 import { initStore } from "./store";
 
-const configureProductStore = () => {
+const configureProductsStore = () => {
   const actions = {
     TOGGLE_FAV: (curState, productId) => {
       const prodIndex = curState.products.findIndex((p) => p.id === productId);
+      console.log("prodIndex: " + prodIndex);
       const newFavStatus = !curState.products[prodIndex].isFavorite;
       const updatedProducts = [...curState.products];
+      console.log(updatedProducts[prodIndex]);
       updatedProducts[prodIndex] = {
-        ...curState.product[prodIndex],
+        ...curState.products[prodIndex],
         isFavorite: newFavStatus,
       };
 
       return { products: updatedProducts };
-    }
+    },
   };
 
-  initStore(actions,{
+  initStore(actions, {
     products: [
-        {
-            id: 'p1',
-            title: 'Red Scarf',
-            description: 'A pretty red scarf.',
-            isFavorite: false
-          },
-          {
-            id: 'p2',
-            title: 'Blue T-Shirt',
-            description: 'A pretty blue t-shirt.',
-            isFavorite: false
-          },
-          {
-            id: 'p3',
-            title: 'Green Trousers',
-            description: 'A pair of lightly green trousers.',
-            isFavorite: false
-          },
-          {
-            id: 'p4',
-            title: 'Orange Hat',
-            description: 'Street style! An orange hat.',
-            isFavorite: false
-          }
-    ]
+      {
+        id: "p1",
+        title: "Red Scarf",
+        description: "A pretty red scarf.",
+        isFavorite: false,
+      },
+      {
+        id: "p2",
+        title: "Blue T-Shirt",
+        description: "A pretty blue t-shirt.",
+        isFavorite: false,
+      },
+      {
+        id: "p3",
+        title: "Green Trousers",
+        description: "A pair of lightly green trousers.",
+        isFavorite: false,
+      },
+      {
+        id: "p4",
+        title: "Orange Hat",
+        description: "Street style! An orange hat.",
+        isFavorite: false,
+      },
+    ],
   });
-
 };
 
-export default configureProductStore;
+export default configureProductsStore;

@@ -2,7 +2,7 @@ import {Fragment} from 'react';
 import { Route } from 'react-router-dom';
 
 import Navigation from './components/Nav/Navigation';
-import Products from './containers/Products';
+import Products from './Pages/Products';
 
 const App = (props) => {
   return(
